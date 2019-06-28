@@ -34,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         if (pendingUser && pendingUser.password){
           var hash = bcrypt.hashSync(pendingUser.password, 12);
           pendingUser.password = hash;
+          console.log(hash);
         }
       }
     }
